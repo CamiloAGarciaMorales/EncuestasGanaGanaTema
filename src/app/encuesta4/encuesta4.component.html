@@ -1,0 +1,380 @@
+<main>
+    <div class="position-relative">
+      <!-- shape Hero -->
+      <section class="section section-lg section-shaped pb-250">
+        <div class="shape shape-style-1 shape-primary">
+          <span class="1-bg"></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="container py-lg-md d-flex">
+          <div class="col px-0">
+            <div class="row">
+              <div class="col-lg-6">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SVG separator -->
+        <div class="separator separator-bottom separator-skew">
+          <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+          </svg>
+        </div>
+      </section>
+    </div>
+  
+    <section class="section section-lg pt-lg-0 section-contact-us">
+      <div class="container">
+        <form [formGroup]="formCompleto" (ngSubmit)="postForm(formCompleto.value)" >
+        <div class="row justify-content-center mt--300">
+          <div class="col-lg-12">
+            <div class="card bg-gradient-secondary shadow">
+              <div class="card-body p-lg-5">
+                <h4 class="mb-1">Cuestionario 4</h4>
+                <h6>Este cuestionario consta de 21 grupos de afirmaciones. Por favor, lea con atención cada uno de ellos cuidadosamente. Luego elija uno de cada grupo, el que mejor describa el modo como se ha sentido las últimas dos semanas, incluyendo el día de hoy. Marque el número correspondiente al enunciado elegido, Si varios enunciados de un mismo grupo le parecen igualmente apropiados, marque el número más alto. 
+                     </h6> 
+
+                <div class="form-group mt-5" >
+                    <p class="mt-0">1.	Tristeza:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta1">
+                        <option value="0">No me siento triste.</option>
+                        <option value="1">Me siento triste gran parte del tiempo .</option>
+                        <option value="2">Me siento triste todo el tiempo.</option>
+                        <option value="3">Me siento tan triste o soy tan infeliz que no puedo soportarlo.</option>
+                      </select>
+                    </div>
+                </div>
+
+                <div class="form-group mt-5" >
+                    <p class="mt-0">2.	Pesimismo:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta2">
+                        <option value="0">No estoy desalentado respecto del mi futuro.</option>
+                        <option value="1">Me siento más desalentado respecto de mi futuro que lo que solía estarlo.</option>
+                        <option value="2">No espero que las cosas funcionen para mi.</option>
+                        <option value="3">Siento que no hay esperanza para mi futuro y que sólo puede empeorar.</option>
+                      </select>
+                    </div>
+                </div>
+
+                <div class="form-group mt-5" >
+                    <p class="mt-0">3.	Fracaso:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta3">
+                        <option value="0">No me siento como un fracasado.</option>
+                        <option value="1">He fracasado más de lo que hubiera debido.</option>
+                        <option value="2">Cuando miro hacia atrás, veo muchos fracasos.</option>
+                        <option value="3">Siento que como persona soy un fracaso total.</option>
+                      </select>
+                    </div>
+                </div>
+
+                <div class="form-group mt-5" >
+                    <p class="mt-0">4.	Pérdida de Placer:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta4">
+                        <option value="0">Obtengo tanto placer como siempre por las cosas de las que disfruto.</option>
+                        <option value="1">No disfruto tanto de las cosas como solía hacerlo.</option>
+                        <option value="2">Obtengo muy poco placer de las cosas que solía disfrutar.</option>
+                        <option value="3">No puedo obtener ningún placer de las cosas de las que solía disfrutar.</option>
+                      </select>
+                    </div>
+                </div>
+  
+                <div class="form-group mt-5" >
+                    <p class="mt-0">5.	Sentimientos de Culpa:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta5">
+                        <option value="0">No me siento particularmente culpable.</option>
+                        <option value="1">Me siento culpable respecto de varias cosas que he hecho o que debería haber
+                            hecho.</option>
+                        <option value="2">Me siento bastante culpable la mayor parte del tiempo.</option>
+                        <option value="3">Me siento culpable todo el tiempo.</option>
+                      </select>
+                    </div>
+                </div>
+  
+                <div class="form-group mt-5" >
+                    <p class="mt-0">6.	Sentimientos de Castigo:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta6">
+                        <option value="0">No siento que este siendo castigado.</option>
+                        <option value="1">Siento que tal vez pueda ser castigado.</option>
+                        <option value="2">Espero ser castigado.</option>
+                        <option value="3">Siento que estoy siendo castigado.</option>
+                      </select>
+                    </div>
+                </div>
+  
+                <div class="form-group mt-5" >
+                    <p class="mt-0">7.	Disconformidad con uno mismo:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta7">
+                        <option value="0">Siento acerca de mi lo mismo que siempre.</option>
+                        <option value="1">He perdido la confianza en mí mismo.</option>
+                        <option value="2">Estoy decepcionado conmigo mismo.</option>
+                        <option value="3">No me gusto a mí mismo.</option>
+                      </select>
+                    </div>
+                </div>
+  
+                <div class="form-group mt-5" >
+                    <p class="mt-0">8.	Autocrítica:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta8">
+                        <option value="0">No me critico ni me culpo más de lo habitual.</option>
+                        <option value="1">Estoy más crítico conmigo mismo de lo que solía estarlo.</option>
+                        <option value="2">Me critico a mí mismo por todos mis errores.</option>
+                        <option value="3">Me culpo a mí mismo por todo lo malo que sucede.</option>
+                      </select>
+                    </div>
+                </div>
+  
+                <div class="form-group mt-5" >
+                    <p class="mt-0">9.	Pensamientos o Deseos Suicidas:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta9">
+                        <option value="0">No tengo ningún pensamiento de matarme.</option>
+                        <option value="1">He tenido pensamientos de matarme, pero no lo haría.</option>
+                        <option value="2">Querría matarme.</option>
+                        <option value="3">Me mataría si tuviera la oportunidad de hacerlo.</option>
+                      </select>
+                    </div>
+                </div>
+  
+  
+                <div class="form-group mt-5" >
+                    <p class="mt-0">10.	Llanto:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta10">
+                        <option value="0">No lloro más de lo que solía hacerlo.</option>
+                        <option value="1">Lloro más de lo que solía hacerlo.</option>
+                        <option value="2">Lloro por cualquier pequeñez.</option>
+                        <option value="3"> Me mataría si tuviera la oportunidad de hacerlo.</option>
+                      </select>
+                    </div>
+                </div>
+  
+                <div class="form-group mt-5" >
+                    <p class="mt-0">11	Agitación:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta11"> 
+                        <option value="0">No estoy más inquieto o tenso que lo habitual.</option>
+                        <option value="1">Me siento más inquieto o tenso que lo habitual.</option>
+                        <option value="2">Estoy tan inquieto o agitado que me es difícil quedarme quieto.</option>
+                        <option value="3">Estoy tan inquieto o agitado que tengo que estar siempre en movimiento o haciendo algo.</option>
+                      </select>
+                    </div>
+                </div>
+  
+  
+                <div class="form-group mt-5" >
+                    <p class="mt-0">12	Pérdida de Interés:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta12">
+                        <option value="0">No he perdido el interés en otras actividades o personas.</option>
+                        <option value="1">Estoy menos interesado que antes en otras personas o cosas.</option>
+                        <option value="2">He perdido casi todo el interés en otras personas o cosas.</option>
+                        <option value="3">Me es difícil interesarme por algo.</option>
+                      </select>
+                    </div>
+                </div>
+  
+                <div class="form-group mt-5" >
+                    <p class="mt-0">13.	Indecisión:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta13">
+                        <option value="0">Tomo mis propias decisiones tan bien como siempre.</option>
+                        <option value="1">Me resulta más difícil que de costumbre tomar decisiones.</option>
+                        <option value="2">Encuentro mucha más dificultad que antes para tomar decisiones.</option>
+                        <option value="3">Tengo problemas para tomar cualquier decisión.</option>
+                      </select>
+                    </div>
+                </div>
+  
+  
+                <div class="form-group mt-5" >
+                    <p class="mt-0">14.	Desvalorización:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta14">
+                        <option value="0">No siento que yo no sea valioso.</option>
+                        <option value="1">No me considero a mi mismo tan valioso y útil como solía considerarme.</option>
+                        <option value="2">Me siento menos valioso cuando me comparo con otros.</option>
+                        <option value="3">Siento que no valgo nada.</option>
+                      </select>
+                    </div>
+                </div>
+  
+  
+                <div class="form-group mt-5" >
+                    <p class="mt-0">15.	Pérdida de Energía:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta15">
+                        <option value="0">Tengo tanta energía como siempre.</option>
+                        <option value="1">Tengo menos energía que la que solía tener.</option>
+                        <option value="2">No tengo suficiente energía para hacer demasiado.</option>
+                        <option value="3">No tengo energía suficiente para hacer nada.</option>
+                      </select>
+                    </div>
+                </div>
+
+                <div class="form-group mt-5" >
+                    <p class="mt-0">16.	Cambios en los Hábitos de Sueño:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta16">
+                        <option value="0">No he experimentado ningún cambio en mis hábitos de sueño.</option>
+                        <option value="1.1">Duermo un poco más que lo habitual.</option>
+                        <option value="1.2">Duermo un poco menos que lo habitual.</option>
+                        <option value="2.1">Duermo mucho más que lo habitual.</option>
+                        <option value="2.2">Duermo mucho menos que lo habitual .</option>
+                        <option value="3.1">Duermo la mayor parte del día.</option>
+                        <option value="3.2">Me despierto 1-2 horas más temprano y no puedo volver a dormirme.</option>
+                      </select>
+                    </div>
+                </div>
+
+                <div class="form-group mt-5" >
+                    <p class="mt-0">17.	Irritabilidad:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta17">
+                        <option value="0">No estoy tan irritable que lo habitual.</option>
+                        <option value="1">Estoy más irritable que lo habitual.</option>
+                        <option value="2">Estoy mucho más irritable que lo habitual.</option>
+                        <option value="3">Estoy irritable todo el tiempo.</option>
+                      </select>
+                    </div>
+                </div>
+  
+                <div class="form-group mt-5" >
+                    <p class="mt-0">18.	Cambios en el Apetito:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta18">
+                        <option value="0">No he experimentado ningún cambio en mi apetito.</option>
+                        <option value="1.1">Mi apetito es un poco menor que lo habitual.</option>
+                        <option value="1.2">Mi apetito es un poco mayor que lo habitual.</option>
+                        <option value="2.1">Mi apetito es mucho menor que antes.</option>
+                        <option value="2.2">Mi apetito es mucho mayor que lo habitual.</option>
+                        <option value="3.1">No tengo apetito en absoluto.</option>
+                        <option value="3.2">Quiero comer todo el día.</option>
+                      </select>
+                    </div>
+                </div>
+
+                <div class="form-group mt-5" >
+                    <p class="mt-0">19.	Dificultad de Concentración:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta19">
+                        <option value="0">Puedo concentrarme tan bien como siempre.</option>
+                        <option value="1">No puedo concentrarme tan bien como habitualmente.</option>
+                        <option value="2">Me es difícil mantener la mente en algo por mucho tiempo.</option>
+                        <option value="3">Encuentro que no puedo concentrarme en nada.</option>
+                      </select>
+                    </div>
+                </div>
+
+                <div class="form-group mt-5" >
+                    <p class="mt-0">20.	Cansancio o Fatiga:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta20">
+                        <option value="0">No estoy más cansado o fatigado que lo habitua.</option>
+                        <option value="1">Me fatigo o me canso más fácilmente que lo habitual.</option>
+                        <option value="2">Estoy demasiado fatigado o cansado para hacer muchas de las cosas que solía hacer.</option>
+                        <option value="3">Estoy demasiado fatigado o cansado para hacer la mayoría de las cosas que solía hacer.</option>
+                      </select>
+                    </div>
+                </div>
+
+                <div class="form-group mt-5" >
+                    <p class="mt-0">21.	Pérdida de Interés en el Sexo:</p>
+                    <div class="input-group input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                      </div>
+                      <select class="form-control" placeholder="Seleccione" formControlName="pregunta21">
+                        <option value="0">No he notado ningún cambio reciente en mi interés por el sexo.</option>
+                        <option value="1">Estoy menos interesado en el sexo de lo que solía estarlo.</option>
+                        <option value="2">Estoy mucho menos interesado en el sexo.</option>
+                        <option value="3">He perdido completamente el interés en el sexo.</option>
+                      </select>
+                    </div>
+                </div>
+  
+                  <button type="submit"  class="btn btn-default btn-round btn-block btn-lg">Siguiente</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </form>
+        </div>
+      
+    </section>
+  </main>

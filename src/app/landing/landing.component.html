@@ -1,0 +1,313 @@
+<main>
+  <div class="position-relative">
+    <!-- shape Hero -->
+    <section class="section section-lg section-shaped pb-250">
+      <div class="shape shape-style-1 shape-primary">
+        <span class="1-bg"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="container py-lg-md d-flex">
+        <div class="col px-0">
+          <div class="row">
+            <div class="col-lg-6">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SVG separator -->
+      <div class="separator separator-bottom separator-skew">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </section>
+  </div>
+
+  <section class="section section-lg pt-lg-0 section-contact-us">
+    <div class="container">
+      <form [formGroup]="formCompleto" (ngSubmit)="postForm(formCompleto.value)" >
+      <div class="row justify-content-center mt--300">
+        <div class="col-lg-12">
+          <div class="card bg-gradient-secondary shadow">
+            <div class="card-body p-lg-5">
+              <h4 class="mb-1">Cuestionario 1</h4>
+              <p class="mt-0">Datos Personales</p>
+              <div class="form-group mt-5" >
+                <p class="mt-0">Seleccione la fecha de hoy</p>
+                <div class="input-group input-group">
+                  <div class="form-group" >
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                      </div>
+                      <input class="form-control datepicker" type="date"  formControlName="fecha_aplicacion" placeholder="Select date" name="dp1"  ngbDatepicker #d1="ngbDatepicker" (click)="d1.toggle()"   type="text" autocomplete="off"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">1.  Cedula:</p>
+                <div class="input-group input-group-">
+                  <input class="form-control" placeholder="Digite Su Respuesta" type="text" formControlName="cedula" (focus)="focus=true" (blur)="focus=false" >
+                </div>
+              </div>
+              
+              <div class="form-group mt-5" >
+                <p class="mt-0">2.  Nombre completo:</p>
+                <div class="input-group input-group-">
+                  <input class="form-control" placeholder="Digite Su Respuesta" type="text" formControlName="nombre_encuestado" (focus)="focus=true" (blur)="focus=false" >
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >               
+                <p class="mt-0">3.	Sexo:</p>
+                <div class="input-group input-group-">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                  </div>
+                  <select class="form-control" placeholder="Seleccione" formControlName="sexo">
+                    <option value="1" selected>Masculino.</option>
+                    <option value="2">Femenino.</option>
+                    <option value="3">Otro.</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">4.	Año de nacimiento:</p>
+                <div class="input-group input-group">
+                  <div class="form-group" >
+                    <div class="input-group input-group-">
+                      <input class="form-control" placeholder="Digite Su Respuesta" type="text" formControlName="anio_nacimiento" (focus)="focus=true" (blur)="focus=false" >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">5.	Estado civil:</p>
+                <div class="input-group input-group-">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                  </div>
+                  <select class="form-control" placeholder="Seleccione" formControlName="estado_civil">
+                    <option value="1">Soltero (a).</option>
+                    <option value="2">Casado (a).</option>
+                    <option value="3">Union marital de derecho.</option>
+                    <option value="4">Separado (a).</option>
+                    <option value="5">Divorciado (a).</option>
+                    <option value="6">Viudo (a).</option>
+                    <option value="7">Sacerdote / Monja.</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">6.	Último nivel de estudios que alcanzó.</p>
+                <div class="input-group input-group-">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                  </div>
+                  <select class="form-control" placeholder="Seleccione" formControlName="ult_niv_estudio">
+                    <option value="1">Ninguno</option>
+                    <option value="2">Primaria incompleta</option>
+                    <option value="3">Primaria completa</option>
+                    <option value="4">Bachillerato incompleto</option>
+                    <option value="5">Bachillerato completo</option>
+                    <option value="6">Técnico / tecnológico incompleto</option>
+                    <option value="7">Técnico / tecnológico completo</option>
+                    <option value="8">Profesional incompleto</option>
+                    <option value="9">Profesional completo</option>
+                    <option value="10">Carrera militar / policía</option>
+                    <option value="11">Post-grado incompleto</option>
+                    <option value="12">Post-grado completo</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">7.	¿Cuál es su ocupación o profesión?</p>
+                <div class="input-group input-group-">
+                  <input class="form-control" formControlName="ocupacion_profesion" placeholder="Digite Su Respuesta" type="text" (focus)="focus=true" (blur)="focus=false">
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">8.	Lugar de residencia actual:</p>
+                <div class="input-group input-group">
+                  <input class="form-control" placeholder="Ciudad / Municipio" formControlName="ciudad_residencia" type="text" (focus)="focus=true" (blur)="focus=false">
+                  &nbsp;
+                  <input class="form-control" placeholder="Departamento" formControlName="departamento_residencia" type="text" (focus)="focus=true" (blur)="focus=false">
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">9.	Seleccione y marque el estrato de los servicios públicos de su vivienda</p>
+                <div class="input-group input-group-">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                  </div>
+                  <select class="form-control" placeholder="Seleccione" formControlName="estrato_servicios">
+                    <option value="1">Estrato 1</option>
+                    <option value="2">Estrato 2</option>
+                    <option value="3">Estrato 3</option>
+                    <option value="4">Estrato 4</option>
+                    <option value="5">Estrato 5</option>
+                    <option value="6">Estrato 6</option>
+                    <option value="7">Finca</option>
+                    <option value="8">No se.</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">10.	Tipo de vivienda</p>
+                <div class="input-group input-group-">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                  </div>
+                  <select class="form-control" placeholder="Seleccione" formControlName="tipo_vivienda">
+                    <option value="1">Propia</option>
+                    <option value="2">Familiar</option>
+                    <option value="3">En Arriendo</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">11.  Número de personas que dependen económicamente de usted (aunque vivan en otro lugar)</p>
+                <div class="input-group input-group-">
+                  <input class="form-control" formControlName="numero_personas_dependientes_econo" placeholder="Digite Su Respuesta" type="text" (focus)="focus=true" (blur)="focus=false">
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">12.	Lugar donde trabaja actualmente:</p>
+                <div class="input-group input-group">
+                  <input class="form-control" placeholder="Ciudad / Municipio" formControlName="ciudad_trabajo" type="text" (focus)="focus=true" (blur)="focus=false">
+                  &nbsp;
+                  <input class="form-control" placeholder="Departamento" type="text" formControlName="departamento_trabajo" (focus)="focus=true" (blur)="focus=false">
+                </div>
+              </div>
+
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">13.	¿Hace cuántos años que trabaja en esta empresa? </p>
+                <div class="input-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                  </div>
+                  <select class="form-control" placeholder="Seleccione" formControlName="anios_lleva_mas_menos_en_empresa" (selectionChange)="habilitarTimeTrabajo($event.value)">
+                    <option value="1">Menos de un año</option>
+                    <option value="2">Mas de un año</option>
+                  </select>
+                </div>
+                <div class="input-group input-group-" >
+                  <input class="form-control" placeholder="Si lleva más de un año, anote cuántos años" formControlName="tiempo_en_empresa" type="text" (focus)="focus=true" (blur)="focus=false">
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">14.	¿Cuál es el nombre del cargo que ocupa en la empresa?</p>
+                <div class="input-group input-group-">
+                  <input class="form-control" placeholder="Digite Su Respuesta" formControlName="nombre_cargo" type="text" (focus)="focus=true" (blur)="focus=false">
+                </div>
+              </div>
+
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">15.	Seleccione el tipo de cargo que más se parece al que usted desempeña y señalelo en el cuadro correspondiente de la derecha. Si tiene dudas pida apoyo a la persona que le entregó este cuestionario</p>
+                <div class="input-group input-group-">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                  </div>
+                  <select class="form-control" placeholder="Seleccione" formControlName="cargo_mas_parecido">
+                    <option value="1">Jefatura - tiene personal a cargo</option>
+                    <option value="2">Profesional, analista, técnico, tecnólogo</option>
+                    <option value="3">Auxiliar, asistente administrativo, asistente técnico</option>
+                    <option value="4">Operario, operador, ayudante, servicios generales</option>
+                  </select>
+                </div>
+              </div>
+
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">16.	¿Hace cuántos años que desempeña el cargo u oficio actual en esta empresa? </p>
+                <div class="input-group input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                  </div>
+                  <select class="form-control" placeholder="Seleccione"  formControlName="anios_mas_menos_en_cargo" (onchange)="habilitarTimeCargo($event.value)">
+                    <option value="1">Menos de un año</option>
+                    <option value="2">Mas de un año</option>
+                  </select>
+                </div>
+                <div class="input-group input-group-" >
+                  <input class="form-control" placeholder="Si lleva más de un año, anote cuántos años" formControlName="anios_en_cargo_empresa" type="text" (focus)="focus=true" (blur)="focus=false">
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">17.	Escriba el nombre del departamento, área o sección de la empresa en el que trabaja</p>
+                <div class="input-group input-group-">
+                  <input class="form-control" placeholder="Digite Su Respuesta" formControlName="departamento_area_seccion_empresa" type="text" (focus)="focus=true" (blur)="focus=false">
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">18.	Seleccione el tipo de contrato que tiene actualmente (marque una sola opción)</p>
+                <div class="input-group input-group-">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                  </div>
+                  <select class="form-control" placeholder="Seleccione" formControlName="tipo_contrato">
+                    <option value="1">Temporal de menos de 1 año</option>
+                    <option value="2">Temporal de 1 año o más</option>
+                    <option value="3">Término indefinido</option>
+                    <option value="4">Cooperado (cooperativa)</option>
+                    <option value="5">Prestación de servicios</option>
+                    <option value="6">No sé</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">19. Indique cuántas horas diarias de trabajo están establecidas habitualmente por la empresa para su cargo</p>
+                <div class="input-group input-group-">
+                  <input class="form-control" placeholder="Digite las horas de trabajo al dia" formControlName="horas_trabajo_al_dia" type="text" (focus)="focus=true" (blur)="focus=false">
+                </div>
+              </div>
+
+              <div class="form-group mt-5" >
+                <p class="mt-0">20.	Seleccione y marque el tipo de salario que recibe (marque una sola opción)</p>
+                <div class="input-group input-group-">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                  </div>
+                  <select class="form-control" placeholder="Seleccione" formControlName="tipo_salario_recibo">
+                    <option value="1">Fijo (diario, semanal, quincenal o mensual)</option>
+                    <option value="2">Una parte fija y otra variable</option>
+                    <option value="3">Todo variable (a destajo, por producción, por comisión)</option>
+                  </select>
+                </div>
+              </div>
+
+                <button type="submit"  class="btn btn-default btn-round btn-block btn-lg">Siguiente</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </form>
+      </div>
+    
+  </section>
+</main>
