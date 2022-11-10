@@ -7,7 +7,9 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 export class EncuestaServiceService {
   arrayFormularios= []
   
-  url:string =  "http://10.250.9.41:3000/api/encuestas/formulario/"
+  url:string =  "http://localhost:3000/api/encuestas/formulario/"
+  urlLogin:string =  "http://localhost:3000/api/encuestas/aut/login"
+  urlSignup:string =  "http://localhost:3000/api/encuestas/aut/signup"
 
   constructor(private http:HttpClient) { }
   
@@ -15,6 +17,14 @@ export class EncuestaServiceService {
   postEncuesta1(form)
   {
     return this.http.post(this.url , form)
+  }
+  postlogin(form)
+  {
+    return this.http.post(this.urlLogin , form)
+  }
+  postSignup(form)
+  {
+    return this.http.post(this.urlSignup , form)
   }
 
 }

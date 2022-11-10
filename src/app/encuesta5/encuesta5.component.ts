@@ -18,7 +18,7 @@ export class Encuesta5Component implements OnInit {
     this.formCompleto = this.formularioCompleto.group(
       {
 
-        //Datos Solicitud
+        // Datos Solicitud
         pregunta1: ['', Validators.required],
         pregunta2: ['', Validators.required],
         pregunta3: ['', Validators.required],
@@ -57,7 +57,7 @@ export class Encuesta5Component implements OnInit {
       pregunta14:form.pregunta14 
     }
 
-    console.log(encuesta5.pregunta14);
+    console.log(encuesta5);
     
 
      const body = new FormData();
@@ -67,11 +67,11 @@ export class Encuesta5Component implements OnInit {
      body.append('encuesta3' , localStorage.getItem("encuesta3"))
      body.append('encuesta4' , localStorage.getItem("encuesta4"))
      body.append('encuesta5' ,  JSON.stringify(encuesta5))
-    this.api.postEncuesta1(encuesta5).subscribe((res:any) => {
+    this.api.postEncuesta1(body).subscribe((res:any) => {
       console.log(res);
      })
 
-     console.log(encuesta5);
+     console.log(this.formCompleto.value);
      
 
 }

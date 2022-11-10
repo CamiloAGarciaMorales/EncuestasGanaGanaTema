@@ -42,15 +42,10 @@ export class Encuesta2Component implements OnInit {
 })
    }
 
-
-   
-   
-   
-   
    postForm(form) {
- 
- 
+    
      let encuesta2: encuesta2 = {
+      cedula:JSON.parse(localStorage.getItem('cedula')),
       pregunta1:form.pregunta1,
       pregunta2:form.pregunta2,
       pregunta3:form.pregunta3,
@@ -74,7 +69,7 @@ export class Encuesta2Component implements OnInit {
       console.log(res);
      }) */
      
-     localStorage.setItem('encuesta2', JSON.stringify(form));
+     localStorage.setItem('encuesta2', JSON.stringify(encuesta2));
      this.router.navigate(['/encuesta3'])
  }
  

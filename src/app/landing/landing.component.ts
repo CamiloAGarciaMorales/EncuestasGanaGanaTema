@@ -102,6 +102,7 @@ export class LandingComponent implements OnInit {
     
     
     localStorage.clear()
+    localStorage.setItem('cedula', JSON.stringify(encuesta1.cedula));
     localStorage.setItem('encuesta1', JSON.stringify(form));
 
     //ocalStorage.setItem("encuesta1", form)

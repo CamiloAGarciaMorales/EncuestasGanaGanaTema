@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="./site-header.component.css">
+<nav id="navbar-main"
+    class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned">
+    <div class="container">
+        <a class="navbar-brand mr-lg-5" [routerLink]="['/login']">
+            <img src="./assets/img/brand/logo_ganagana.png">
+        </a>
+        <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar_global" [ngbCollapse]="isCollapsed">
+            <div class="navbar-collapse-header">
+                <div class="row">
+                    <div class="col-6 collapse-brand">
+                        <a [routerLink]="['/home']">
+                            <img src="./assets/img/brand/blue.png">
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <button type="button" class="navbar-toggler" (click)="isCollapsed = !isCollapsed"
+                            [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#/encuesta1">Realizar Encuesta</a>
+                </li>
+                <h1></h1>
+                <li class="nav-item asd"><a class="nav-link" href="">Salir</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

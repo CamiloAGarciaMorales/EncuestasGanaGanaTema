@@ -28,6 +28,7 @@ tipo_salario_recibo:String
 }
 export interface encuesta2
 {
+    cedula:number
     pregunta1:number
     pregunta2:number
     pregunta3:number
