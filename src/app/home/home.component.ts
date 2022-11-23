@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EncuestaServiceService } from '../api/encuesta-service.service';
 
 @Component({
     selector: 'app-home',
@@ -8,16 +9,36 @@ import { Component, OnInit } from '@angular/core';
 
 export class HomeComponent implements OnInit {
 
-    
-    model = {
-        left: true,
-        middle: false,
-        right: false
-    };
+    allEncuestados: any = [];
+    todo: any[]= [];
 
-    focus;
-    focus1;
-    constructor() { }
+    constructor(private api: EncuestaServiceService) { }
 
-    ngOnInit() {}
+    ngOnInit():void 
+    {
+        this.encuestados();
+    }
+
+    encuestados(): void {
+        this.api
+            .getEncuestas()
+            .subscribe((response: any) => {
+              this.allEncuestados = response;
+              console.log(response);
+              
+            });
+      }
+
+    todos(){
+        this.api
+            .getTodo()
+            .subscribe((response: any) => {
+              this.todo = response;
+              this.api.exportAsExcelFile(this.todo, 'Total_encuestas')
+
+              
+              
+            },err=>{console.log(err.message);
+            });
+      }
 }

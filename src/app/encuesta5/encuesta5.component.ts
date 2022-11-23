@@ -41,20 +41,21 @@ export class Encuesta5Component implements OnInit {
  
  
     let encuesta5: encuesta5 = {
-      pregunta1:form.pregunta1,
-      pregunta2:form.pregunta2,
-      pregunta3:form.pregunta3,
-      pregunta4:form.pregunta4,
-      pregunta5:form.pregunta5,
-      pregunta6:form.pregunta6,
-      pregunta7:form.pregunta7,
-      pregunta8:form.pregunta8,
-      pregunta9:form.pregunta9,
-      pregunta10:form.pregunta10,
-      pregunta11:form.pregunta11,
-      pregunta12:form.pregunta12,
-      pregunta13:form.pregunta13,
-      pregunta14:form.pregunta14 
+      e5_pregunta1:form.pregunta1,
+      e5_pregunta2:form.pregunta2,
+      e5_pregunta3:form.pregunta3,
+      e5_pregunta4:form.pregunta4,
+      e5_pregunta5:form.pregunta5,
+      e5_pregunta6:form.pregunta6,
+      e5_pregunta7:form.pregunta7,
+      e5_pregunta8:form.pregunta8,
+      e5_pregunta9:form.pregunta9,
+      e5_pregunta10:form.pregunta10,
+      e5_pregunta11:form.pregunta11,
+      e5_pregunta12:form.pregunta12,
+      e5_pregunta13:form.pregunta13,
+      e5_pregunta14:form.pregunta14,
+
     }
 
     console.log(encuesta5);
@@ -69,9 +70,10 @@ export class Encuesta5Component implements OnInit {
      body.append('encuesta5' ,  JSON.stringify(encuesta5))
     this.api.postEncuesta1(body).subscribe((res:any) => {
       console.log(res);
+      localStorage.clear();
      })
 
-     console.log(this.formCompleto.value);
+     
      
 
 }

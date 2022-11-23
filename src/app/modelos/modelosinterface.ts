@@ -29,78 +29,81 @@ tipo_salario_recibo:String
 export interface encuesta2
 {
     cedula:number
-    pregunta1:number
-    pregunta2:number
-    pregunta3:number
-    pregunta4:number
-    pregunta5:number
-    pregunta6:number
-    pregunta7:number
-    pregunta8:number
-    pregunta9:number
-    pregunta10:number
-    pregunta11:number
-    pregunta12:number
-    pregunta13:number
-    pregunta14:number
-    pregunta15:number
+    e2_pregunta1:number
+    e2_pregunta2:number
+    e2_pregunta3:number
+    e2_pregunta4:number
+    e2_pregunta5:number
+    e2_pregunta6:number
+    e2_pregunta7:number
+    e2_pregunta8:number
+    e2_pregunta9:number
+    e2_pregunta10:number
+    e2_pregunta11:number
+    e2_pregunta12:number
+    e2_pregunta13:number
+    e2_pregunta14:number
+    e2_pregunta15:number
 }
 export interface encuesta3
 {
-    pregunta1:number
-    pregunta2:number
-    pregunta3:number
-    pregunta4:number
-    pregunta5:number
-    pregunta6:number
-    pregunta7:number
-    pregunta8:number
-    pregunta9:number
-    pregunta10:number
-    pregunta11:number
-    pregunta12:number
-    pregunta13:number
-    pregunta14:number
-    pregunta15:number
+    e3_pregunta1:number
+    e3_pregunta2:number
+    e3_pregunta3:number
+    e3_pregunta4:number
+    e3_pregunta5:number
+    e3_pregunta6:number
+    e3_pregunta7:number
+    e3_pregunta8:number
+    e3_pregunta9:number
+    e3_pregunta10:number
+    e3_pregunta11:number
+    e3_pregunta12:number
+    e3_pregunta13:number
+    e3_pregunta14:number
+    e3_pregunta15:number
+   
 }
 export interface encuesta4
 {
-    pregunta1:number
-    pregunta2:number
-    pregunta3:number
-    pregunta4:number
-    pregunta5:number
-    pregunta6:number
-    pregunta7:number
-    pregunta8:number
-    pregunta9:number
-    pregunta10:number
-    pregunta11:number
-    pregunta12:number
-    pregunta13:number
-    pregunta14:number
-    pregunta15:number
-    pregunta16:number
-    pregunta17:number
-    pregunta18:number
-    pregunta19:number
-    pregunta20:number
-    pregunta21:number
+    e4_pregunta1:number
+    e4_pregunta2:number
+    e4_pregunta3:number
+    e4_pregunta4:number
+    e4_pregunta5:number
+    e4_pregunta6:number
+    e4_pregunta7:number
+    e4_pregunta8:number
+    e4_pregunta9:number
+    e4_pregunta10:number
+    e4_pregunta11:number
+    e4_pregunta12:number
+    e4_pregunta13:number
+    e4_pregunta14:number
+    e4_pregunta15:number
+    e4_pregunta16:number
+    e4_pregunta17:number
+    e4_pregunta18:number
+    e4_pregunta19:number
+    e4_pregunta20:number
+    e4_pregunta21:number
+  
 }
 export interface encuesta5
 {
-    pregunta1:number
-    pregunta2:number
-    pregunta3:number
-    pregunta4:number
-    pregunta5:number
-    pregunta6:number
-    pregunta7:number
-    pregunta8:number
-    pregunta9:number
-    pregunta10:number
-    pregunta11:number
-    pregunta12:number
-    pregunta13:number
-    pregunta14:number
+    e5_pregunta1:number
+    e5_pregunta2:number
+    e5_pregunta3:number
+    e5_pregunta4:number
+    e5_pregunta5:number
+    e5_pregunta6:number
+    e5_pregunta7:number
+    e5_pregunta8:number
+    e5_pregunta9:number
+    e5_pregunta10:number
+    e5_pregunta11:number
+    e5_pregunta12:number
+    e5_pregunta13:number
+    e5_pregunta14:number
+    
 }

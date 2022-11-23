@@ -1,0 +1,12 @@
+div.card.bg-secondary.shadow.border-0
+{
+    border-radius: 20px;
+}
+div.card-header.bg-white.pb-5
+{
+    border-radius: 20px;
+}
+button.btn.btn-primary
+{
+    border-radius: 7px;
+}

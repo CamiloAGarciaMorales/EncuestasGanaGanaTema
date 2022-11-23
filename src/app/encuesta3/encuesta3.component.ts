@@ -40,24 +40,25 @@ export class Encuesta3Component implements OnInit {
   postForm(form) {
  
  
-    let encuesta2: encuesta3 = {
-      pregunta1:form.pregunta1,
-      pregunta2:form.pregunta2,
-      pregunta3:form.pregunta3,
-      pregunta4:form.pregunta4,
-      pregunta5:form.pregunta5,
-      pregunta6:form.pregunta6,
-      pregunta7:form.pregunta7,
-      pregunta8:form.pregunta8,
-      pregunta9:form.pregunta9,
-      pregunta10:form.pregunta10,
-      pregunta11:form.pregunta11,
-      pregunta12:form.pregunta12,
-      pregunta13:form.pregunta13,
-      pregunta14:form.pregunta14,
-      pregunta15:form.pregunta15
+    let encuesta3: encuesta3 = {
+      e3_pregunta1:form.pregunta1,
+      e3_pregunta2:form.pregunta2,
+      e3_pregunta3:form.pregunta3,
+      e3_pregunta4:form.pregunta4,
+      e3_pregunta5:form.pregunta5,
+      e3_pregunta6:form.pregunta6,
+      e3_pregunta7:form.pregunta7,
+      e3_pregunta8:form.pregunta8,
+      e3_pregunta9:form.pregunta9,
+      e3_pregunta10:form.pregunta10,
+      e3_pregunta11:form.pregunta11,
+      e3_pregunta12:form.pregunta12,
+      e3_pregunta13:form.pregunta13,
+      e3_pregunta14:form.pregunta14,
+      e3_pregunta15:form.pregunta15,
+    
     }
-
+ 
     localStorage.setItem('encuesta3', JSON.stringify(form));
     this.router.navigate(['/encuesta4'])
 }

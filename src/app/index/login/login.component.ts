@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EncuestaServiceService } from '../../api/encuesta-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   focus;
   focus1;
   formLogin : FormGroup
-  constructor(public formularioCompleto: FormBuilder, public api:EncuestaServiceService) 
+  constructor(public formularioCompleto: FormBuilder, public api:EncuestaServiceService, private router : Router) 
   {
     this.formLogin = this.formularioCompleto.group(
       {
@@ -25,13 +26,14 @@ export class LoginComponent implements OnInit {
 
   login(form)
   {
-    this.api.postlogin(form).subscribe((res:any) => {
+   /* this.api.postlogin(form).subscribe((res:any) => {
       if(res==200)
       {
         
       }
-     })
+     })*/
     console.log(form)
+    this.router.navigate(['/admin'])
 
 
   }

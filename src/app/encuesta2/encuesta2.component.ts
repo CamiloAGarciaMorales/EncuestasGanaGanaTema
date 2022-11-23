@@ -46,21 +46,21 @@ export class Encuesta2Component implements OnInit {
     
      let encuesta2: encuesta2 = {
       cedula:JSON.parse(localStorage.getItem('cedula')),
-      pregunta1:form.pregunta1,
-      pregunta2:form.pregunta2,
-      pregunta3:form.pregunta3,
-      pregunta4:form.pregunta4,
-      pregunta5:form.pregunta5,
-      pregunta6:form.pregunta6,
-      pregunta7:form.pregunta7,
-      pregunta8:form.pregunta8,
-      pregunta9:form.pregunta9,
-      pregunta10:form.pregunta10,
-      pregunta11:form.pregunta11,
-      pregunta12:form.pregunta12,
-      pregunta13:form.pregunta13,
-      pregunta14:form.pregunta14,
-      pregunta15:form.pregunta15
+      e2_pregunta1:form.pregunta1,
+      e2_pregunta2:form.pregunta2,
+      e2_pregunta3:form.pregunta3,
+      e2_pregunta4:form.pregunta4,
+      e2_pregunta5:form.pregunta5,
+      e2_pregunta6:form.pregunta6,
+      e2_pregunta7:form.pregunta7,
+      e2_pregunta8:form.pregunta8,
+      e2_pregunta9:form.pregunta9,
+      e2_pregunta10:form.pregunta10,
+      e2_pregunta11:form.pregunta11,
+      e2_pregunta12:form.pregunta12,
+      e2_pregunta13:form.pregunta13,
+      e2_pregunta14:form.pregunta14,
+      e2_pregunta15:form.pregunta15
      }
      /* const body = new FormData();
      console.log(localStorage.getItem("encuesta1"))

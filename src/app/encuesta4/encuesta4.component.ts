@@ -46,28 +46,29 @@ export class Encuesta4Component implements OnInit {
   
   postForm(form) {
  
-    let encuesta2: encuesta4 = {
-      pregunta1:form.pregunta1,
-      pregunta2:form.pregunta2,
-      pregunta3:form.pregunta3,
-      pregunta4:form.pregunta4,
-      pregunta5:form.pregunta5,
-      pregunta6:form.pregunta6,
-      pregunta7:form.pregunta7,
-      pregunta8:form.pregunta8,
-      pregunta9:form.pregunta9,
-      pregunta10:form.pregunta10,
-      pregunta11:form.pregunta11,
-      pregunta12:form.pregunta12,
-      pregunta13:form.pregunta13,
-      pregunta14:form.pregunta14,
-      pregunta15:form.pregunta15,
-      pregunta16:form.pregunta16,
-      pregunta17:form.pregunta17,
-      pregunta18:form.pregunta18,
-      pregunta19:form.pregunta19,
-      pregunta20:form.pregunta20,
-      pregunta21:form.pregunta21
+    let encuesta4: encuesta4 = {
+      e4_pregunta1:form.pregunta1,
+      e4_pregunta2:form.pregunta2,
+      e4_pregunta3:form.pregunta3,
+      e4_pregunta4:form.pregunta4,
+      e4_pregunta5:form.pregunta5,
+      e4_pregunta6:form.pregunta6,
+      e4_pregunta7:form.pregunta7,
+      e4_pregunta8:form.pregunta8,
+      e4_pregunta9:form.pregunta9,
+      e4_pregunta10:form.pregunta10,
+      e4_pregunta11:form.pregunta11,
+      e4_pregunta12:form.pregunta12,
+      e4_pregunta13:form.pregunta13,
+      e4_pregunta14:form.pregunta14,
+      e4_pregunta15:form.pregunta15,
+      e4_pregunta16:form.pregunta16,
+      e4_pregunta17:form.pregunta17,
+      e4_pregunta18:form.pregunta18,
+      e4_pregunta19:form.pregunta19,
+      e4_pregunta20:form.pregunta20,
+      e4_pregunta21:form.pregunta21,
+  
     }
 
     localStorage.setItem('encuesta4', JSON.stringify(form));
