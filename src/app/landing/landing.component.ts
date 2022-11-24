@@ -19,6 +19,10 @@ export class LandingComponent implements OnInit {
   focus1: any;
   fecha:Date;
   formCompleto : FormGroup
+  dep: any
+  mun: any
+  filMun:boolean
+  munFil:any
   constructor(public formularioCompleto: FormBuilder, private api:EncuestaServiceService,private router : Router ) { 
     
     this.formCompleto = this.formularioCompleto.group(
@@ -26,7 +30,6 @@ export class LandingComponent implements OnInit {
 
         //Datos Solicitud
         cedula:['', Validators.required],
-        fecha_aplicacion:['', Validators.required],
         nombre_encuestado:['', Validators.required],
         sexo:['', Validators.required],
         anio_nacimiento:['', Validators.required],
@@ -70,10 +73,9 @@ export class LandingComponent implements OnInit {
   }
   postForm(form) {
 
-    console.log("asd")
+    
     let encuesta1: encuesta1 = {
       cedula: form.cedula,
-      fecha_aplicacion: form.fecha_aplicacion,
       nombre_encuestado: form.nombre_encuestado,
       sexo: form.sexo,
       anio_nacimiento:form.anio_nacimiento,
@@ -103,7 +105,7 @@ export class LandingComponent implements OnInit {
     
     localStorage.clear()
     localStorage.setItem('cedula', JSON.stringify(encuesta1.cedula));
-    localStorage.setItem('encuesta1', JSON.stringify(form));
+    localStorage.setItem('encuesta1', JSON.stringify(encuesta1));
 
     //ocalStorage.setItem("encuesta1", form)
     this.router.navigate(['/encuesta2'])
@@ -111,7 +113,7 @@ export class LandingComponent implements OnInit {
 
 }
 
-  
+
   
   habilitarTimeCargo(subCargo) {
     if (subCargo == "2") {
@@ -120,6 +122,36 @@ export class LandingComponent implements OnInit {
 
   }
 
-  ngOnInit() {}
+  traerDep()
+  {
+    
+    this.api.getDepa().subscribe(res => {
+      this.dep=res
+    
+      console.log(this.dep)
+    }, err => {console.error(err.message)})
+  }
 
+  
+  traerMun()
+  {
+    this.api.getMuni().subscribe(res => {
+      this.mun=res
+      
+    }, err => {console.error(err.message)})
+  }
+
+  filtrarMuni(id)
+  {
+    console.log(id)
+    this.filMun=true
+    this.munFil = this.mun.filter(i=>i.id_departamento==id)
+  }
+
+  ngOnInit() {
+    this.traerDep()
+    this.traerMun()
+  }
+
+  
 }

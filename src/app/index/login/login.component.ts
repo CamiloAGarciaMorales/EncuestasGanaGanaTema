@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
       {
 
         // Datos Solicitud
-        usuario: ['', Validators.required],
+        user: ['', Validators.required],
         password: ['', Validators.required]
         
 })
@@ -26,14 +26,20 @@ export class LoginComponent implements OnInit {
 
   login(form)
   {
-   /* this.api.postlogin(form).subscribe((res:any) => {
-      if(res==200)
+    this.api.postlogin(form).subscribe((res:any) => {
+      console.log(res)
+      if(res.statusCode==200)
       {
-        
+        sessionStorage.setItem('token','abcd')
+
+        window.alert("Bienvenido/a")
+
+        this.router.navigate(['/admin'])
       }
-     })*/
-    console.log(form)
-    this.router.navigate(['/admin'])
+      else{window.alert("Usuario o contraseña incorrecta")} 
+     })
+   
+    
 
 
   }

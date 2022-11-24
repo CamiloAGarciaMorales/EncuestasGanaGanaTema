@@ -18,6 +18,7 @@ export class Encuesta3Component implements OnInit {
       {
 
         //Datos Solicitud
+        cedula:['', Validators.required],
         pregunta1: ['', Validators.required],
         pregunta2: ['', Validators.required],
         pregunta3: ['', Validators.required],
@@ -41,6 +42,7 @@ export class Encuesta3Component implements OnInit {
  
  
     let encuesta3: encuesta3 = {
+      cedula:JSON.parse(localStorage.getItem('cedula')),
       e3_pregunta1:form.pregunta1,
       e3_pregunta2:form.pregunta2,
       e3_pregunta3:form.pregunta3,
@@ -59,7 +61,8 @@ export class Encuesta3Component implements OnInit {
     
     }
  
-    localStorage.setItem('encuesta3', JSON.stringify(form));
+    localStorage.setItem('encuesta3', JSON.stringify(encuesta3));
+    console.log(encuesta3)
     this.router.navigate(['/encuesta4'])
 }
 

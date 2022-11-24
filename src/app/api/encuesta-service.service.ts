@@ -17,6 +17,8 @@ export class EncuestaServiceService {
   urlSignup: string = "http://localhost:3000/api/encuestas/aut/signup"
   urlEncuestaGet: string = "http://localhost:3000/api/encuestas/formulario/encuestaGet"
   urlEncuestaTodo: string = "http://localhost:3000/api/encuestas/formulario/encuestaTodo"
+  urlDepa: string = "http://localhost:3000/api/encuestas/dep/"
+  urlMuni: string = "http://localhost:3000/api/encuestas/mun/"
 
 
   constructor(private http: HttpClient) { }
@@ -51,6 +53,12 @@ export class EncuestaServiceService {
   }
   getTodo() {
     return this.http.get(this.urlEncuestaTodo)
+  }
+  getDepa(){
+    return this.http.get(this.urlDepa)
+  }
+  getMuni(){
+    return this.http.get(this.urlMuni)
   }
 
 }

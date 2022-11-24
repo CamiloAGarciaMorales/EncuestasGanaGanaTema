@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { encuesta5 } from '../modelos/modelosinterface';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EncuestaServiceService } from '../api/encuesta-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-encuesta5',
@@ -14,11 +15,12 @@ export class Encuesta5Component implements OnInit {
   focus1: any;
   arrayFormularios= []
   formCompleto : FormGroup
-  constructor(public formularioCompleto: FormBuilder, public api:EncuestaServiceService) { 
+  constructor(public formularioCompleto: FormBuilder, public api:EncuestaServiceService, public router:Router) { 
     this.formCompleto = this.formularioCompleto.group(
       {
 
         // Datos Solicitud
+        cedula:['', Validators.required],
         pregunta1: ['', Validators.required],
         pregunta2: ['', Validators.required],
         pregunta3: ['', Validators.required],
@@ -41,6 +43,7 @@ export class Encuesta5Component implements OnInit {
  
  
     let encuesta5: encuesta5 = {
+      cedula:JSON.parse(localStorage.getItem('cedula')),
       e5_pregunta1:form.pregunta1,
       e5_pregunta2:form.pregunta2,
       e5_pregunta3:form.pregunta3,
@@ -70,7 +73,8 @@ export class Encuesta5Component implements OnInit {
      body.append('encuesta5' ,  JSON.stringify(encuesta5))
     this.api.postEncuesta1(body).subscribe((res:any) => {
       console.log(res);
-      localStorage.clear();
+      //localStorage.clear();
+      this.router.navigate(['/admin'])
      })
 
      

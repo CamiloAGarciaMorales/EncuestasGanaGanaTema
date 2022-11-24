@@ -62,12 +62,6 @@ export class Encuesta2Component implements OnInit {
       e2_pregunta14:form.pregunta14,
       e2_pregunta15:form.pregunta15
      }
-     /* const body = new FormData();
-     console.log(localStorage.getItem("encuesta1"))
-     body.append('encuesta1' , localStorage.getItem("encuesta1"))
-     this.api.postEncuesta1(body).subscribe((res:any) => {
-      console.log(res);
-     }) */
      
      localStorage.setItem('encuesta2', JSON.stringify(encuesta2));
      this.router.navigate(['/encuesta3'])

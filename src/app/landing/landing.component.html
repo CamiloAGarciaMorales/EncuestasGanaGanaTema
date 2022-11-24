@@ -39,19 +39,7 @@
             <div class="card-body p-lg-5">
               <h4 class="mb-1">Cuestionario 1</h4>
               <h6 class="h6"><strong>Datos Personales</strong> </h6>
-              <div class="form-group mt-5" >
-                <p class="mt-0">Seleccione la fecha de hoy</p>
-                <div class="input-group input-group">
-                  <div class="form-group" >
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
-                      </div>
-                      <input class="form-control datepicker" type="date"  formControlName="fecha_aplicacion" placeholder="Select date" name="dp1"  ngbDatepicker #d1="ngbDatepicker" (click)="d1.toggle()"   type="text" autocomplete="off"/>
-                    </div>
-                  </div>
-                </div>
-              </div>
+             
 
               <div class="form-group mt-5" >
                 <p class="mt-0">1.  Cedula:</p>
@@ -74,9 +62,9 @@
                     <span class="input-group-text"><i class="ni ni-collection"></i></span>
                   </div>
                   <select class="form-control" placeholder="Seleccione" formControlName="sexo">
-                    <option value="1" selected>Masculino.</option>
-                    <option value="2">Femenino.</option>
-                    <option value="3">Otro.</option>
+                    <option value="Masculino" selected>Masculino.</option>
+                    <option value="Femenino">Femenino.</option>
+                    <option value="Otro">Otro.</option>
                   </select>
                 </div>
               </div>
@@ -99,13 +87,13 @@
                     <span class="input-group-text"><i class="ni ni-collection"></i></span>
                   </div>
                   <select class="form-control" placeholder="Seleccione" formControlName="estado_civil">
-                    <option value="1">Soltero (a).</option>
-                    <option value="2">Casado (a).</option>
-                    <option value="3">Union marital de derecho.</option>
-                    <option value="4">Separado (a).</option>
-                    <option value="5">Divorciado (a).</option>
-                    <option value="6">Viudo (a).</option>
-                    <option value="7">Sacerdote / Monja.</option>
+                    <option value="Soltero (a)">Soltero (a).</option>
+                    <option value="Casado (a)">Casado (a).</option>
+                    <option value="Union marital de derecho">Union marital de derecho.</option>
+                    <option value="Separado (a)">Separado (a).</option>
+                    <option value="Divorciado (a)">Divorciado (a).</option>
+                    <option value="Viudo (a)">Viudo (a).</option>
+                    <option value="Sacerdote / Monja">Sacerdote / Monja.</option>
                   </select>
                 </div>
               </div>
@@ -117,18 +105,22 @@
                     <span class="input-group-text"><i class="ni ni-collection"></i></span>
                   </div>
                   <select class="form-control" placeholder="Seleccione" formControlName="ult_niv_estudio">
-                    <option value="1">Ninguno</option>
-                    <option value="2">Primaria incompleta</option>
-                    <option value="3">Primaria completa</option>
-                    <option value="4">Bachillerato incompleto</option>
-                    <option value="5">Bachillerato completo</option>
-                    <option value="6">Técnico / tecnológico incompleto</option>
-                    <option value="7">Técnico / tecnológico completo</option>
-                    <option value="8">Profesional incompleto</option>
-                    <option value="9">Profesional completo</option>
-                    <option value="10">Carrera militar / policía</option>
-                    <option value="11">Post-grado incompleto</option>
-                    <option value="12">Post-grado completo</option>
+                    <option value="Ninguno">Ninguno</option>
+                    <option value="Primaria incompleta">Primaria incompleta</option>
+                    <option value="Primaria completa">Primaria completa</option>
+                    <option value="Bachillerato incompleto">Bachillerato incompleto</option>
+                    <option value="Bachillerato completo">Bachillerato completo</option>
+                    <option value="Técnico / tecnológico incompleto">Técnico / tecnológico incompleto</option>
+                    <option value="Técnico / tecnológico completo">Técnico / tecnológico completo</option>
+                    <option value="Profesional incompleto">Profesional incompleto</option>
+                    <option value="Profesional completo">Profesional completo</option>
+                    <option value="Carrera militar / policía">Carrera militar / policía</option>
+                    <option value="Post-grado incompleto">Post-grado incompleto</option>
+                    <option value="Post-grado completo">Post-grado completo</option>
+                    <option value="Especialización">Especialización</option>
+                    <option value="Maestria">Maestria</option>
+                    <option value="Doctorado">Doctorado</option>
+
                   </select>
                 </div>
               </div>
@@ -143,9 +135,22 @@
               <div class="form-group mt-5" >
                 <p class="mt-0">8.	Lugar de residencia actual:</p>
                 <div class="input-group input-group">
-                  <input class="form-control" placeholder="Ciudad / Municipio" formControlName="ciudad_residencia" type="text" (focus)="focus=true" (blur)="focus=false">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                  </div>
+                    <select class="form-control" placeholder="Departamento" formControlName="departamento_residencia" (change)="filtrarMuni($event.target.value)">
+                      <option [value]="departamento.id_departamento" *ngFor="let departamento of dep">
+                        {{departamento.nom_departamento}}
+                      </option>
+                    </select>
                   &nbsp;
-                  <input class="form-control" placeholder="Departamento" formControlName="departamento_residencia" type="text" (focus)="focus=true" (blur)="focus=false">
+                  <div class="col-md-3" *ngIf="filMun">
+                      <select class="form-control" placeholder="Ciudad de residencia" formControlName="ciudad_residencia">
+                        <option [value]="municipio.id_municipio" *ngFor="let municipio of munFil">
+                          {{municipio.nom_municipio}}
+                        </option>
+                      </select>
+                  </div>
                 </div>
               </div>
 
@@ -156,14 +161,14 @@
                     <span class="input-group-text"><i class="ni ni-collection"></i></span>
                   </div>
                   <select class="form-control" placeholder="Seleccione" formControlName="estrato_servicios">
-                    <option value="1">Estrato 1</option>
-                    <option value="2">Estrato 2</option>
-                    <option value="3">Estrato 3</option>
-                    <option value="4">Estrato 4</option>
-                    <option value="5">Estrato 5</option>
-                    <option value="6">Estrato 6</option>
-                    <option value="7">Finca</option>
-                    <option value="8">No se.</option>
+                    <option value="Estrato 1">Estrato 1</option>
+                    <option value="Estrato 2">Estrato 2</option>
+                    <option value="Estrato 3">Estrato 3</option>
+                    <option value="Estrato 4">Estrato 4</option>
+                    <option value="Estrato 5">Estrato 5</option>
+                    <option value="Estrato 6">Estrato 6</option>
+                    <option value="Finca">Finca</option>
+                    <option value="No se">No se.</option>
                   </select>
                 </div>
               </div>
@@ -175,9 +180,9 @@
                     <span class="input-group-text"><i class="ni ni-collection"></i></span>
                   </div>
                   <select class="form-control" placeholder="Seleccione" formControlName="tipo_vivienda">
-                    <option value="1">Propia</option>
-                    <option value="2">Familiar</option>
-                    <option value="3">En Arriendo</option>
+                    <option value="Propia">Propia</option>
+                    <option value="Familiar">Familiar</option>
+                    <option value="En Arriendo">En Arriendo</option>
                   </select>
                 </div>
               </div>
@@ -192,9 +197,22 @@
               <div class="form-group mt-5" >
                 <p class="mt-0">12.	Lugar donde trabaja actualmente:</p>
                 <div class="input-group input-group">
-                  <input class="form-control" placeholder="Ciudad / Municipio" formControlName="ciudad_trabajo" type="text" (focus)="focus=true" (blur)="focus=false">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                  </div>
+                    <select class="form-control" placeholder="Departamento" formControlName="departamento_trabajo" (change)="filtrarMuni($event.target.value)">
+                      <option [value]="departamento.id_departamento" *ngFor="let departamento of dep">
+                        {{departamento.nom_departamento}}
+                      </option>
+                    </select>
                   &nbsp;
-                  <input class="form-control" placeholder="Departamento" type="text" formControlName="departamento_trabajo" (focus)="focus=true" (blur)="focus=false">
+                  <div class="col-md-3" *ngIf="filMun">
+                      <select class="form-control" placeholder="Ciudad de residencia" formControlName="ciudad_trabajo">
+                        <option [value]="municipio.id_municipio" *ngFor="let municipio of munFil">
+                          {{municipio.nom_municipio}}
+                        </option>
+                      </select>
+                  </div>
                 </div>
               </div>
 
@@ -206,8 +224,8 @@
                     <span class="input-group-text"><i class="ni ni-collection"></i></span>
                   </div>
                   <select class="form-control" placeholder="Seleccione" formControlName="anios_lleva_mas_menos_en_empresa" (selectionChange)="habilitarTimeTrabajo($event.value)">
-                    <option value="1">Menos de un año</option>
-                    <option value="2">Mas de un año</option>
+                    <option value="0">Menos de un año</option>
+                    <option value="1">Mas de un año</option>
                   </select>
                 </div>
                 <div class="input-group input-group-" >
@@ -216,9 +234,18 @@
               </div>
 
               <div class="form-group mt-5" >
-                <p class="mt-0">14.	¿Cuál es el nombre del cargo que ocupa en la empresa?</p>
+                <p class="mt-0">14.	¿Cuál es el nombre del cargo que aspira u ocupa en la empresa?</p>
+               
                 <div class="input-group input-group-">
-                  <input class="form-control" placeholder="Digite Su Respuesta" formControlName="nombre_cargo" type="text" (focus)="focus=true" (blur)="focus=false">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                  </div>
+                  <select class="form-control" placeholder="Seleccione" formControlName="nombre_cargo">
+                    <option value="Ventas">Ventas</option>
+                    <option value="Administrativo comercial">Administrativo comercial</option>
+                    <option value="Administrativo">Administrativo</option>
+                    <option value="Colocador independiente">Colocador independiente</option>
+                  </select>
                 </div>
               </div>
 
@@ -230,11 +257,11 @@
                     <span class="input-group-text"><i class="ni ni-collection"></i></span>
                   </div>
                   <select class="form-control" placeholder="Seleccione" formControlName="cargo_mas_parecido">
-                    <option value="1">Jefatura - tiene personal a cargo</option>
-                    <option value="2">Profesional, analista, técnico, tecnólogo</option>
-                    <option value="3">Auxiliar, asistente administrativo, asistente técnico</option>
-                    <option value="4">Operario, operador, ayudante, servicios generales</option>
-                    <option value="5">Colocador independiente</option>
+                    <option value="Jefatura - tiene personal a cargo">Jefatura - tiene personal a cargo</option>
+                    <option value="Profesional, analista, técnico, tecnólogo">Profesional, analista, técnico, tecnólogo</option>
+                    <option value="Auxiliar, asistente administrativo, asistente técnico">Auxiliar, asistente administrativo, asistente técnico</option>
+                    <option value="Operario, operador, ayudante, servicios generales">Operario, operador, ayudante, servicios generales</option>
+                    <option value="Colocador independiente">Colocador independiente</option>
                   </select>
                 </div>
               </div>
@@ -247,8 +274,8 @@
                     <span class="input-group-text"><i class="ni ni-collection"></i></span>
                   </div>
                   <select class="form-control" placeholder="Seleccione"  formControlName="anios_mas_menos_en_cargo" (onchange)="habilitarTimeCargo($event.value)">
-                    <option value="1">Menos de un año</option>
-                    <option value="2">Mas de un año</option>
+                    <option value="0">Menos de un año</option>
+                    <option value="1">Mas de un año</option>
                   </select>
                 </div>
                 <div class="input-group input-group-" >
@@ -270,12 +297,13 @@
                     <span class="input-group-text"><i class="ni ni-collection"></i></span>
                   </div>
                   <select class="form-control" placeholder="Seleccione" formControlName="tipo_contrato">
-                    <option value="1">Temporal de menos de 1 año</option>
-                    <option value="2">Temporal de 1 año o más</option>
-                    <option value="3">Término indefinido</option>
-                    <option value="4">Cooperado (cooperativa)</option>
-                    <option value="5">Prestación de servicios</option>
-                    <option value="6">No sé</option>
+                    <option value="Temporal de menos de 1 año">Temporal de menos de 1 año</option>
+                    <option value="Temporal de 1 año o más">Temporal de 1 año o más</option>
+                    <option value="Término indefinido">Término indefinido</option>
+                    <option value="Colocador independiente">Colocador independiente</option>
+                    <option value="Cooperado (cooperativa)">Cooperado (cooperativa)</option>
+                    <option value="Prestación de servicios">Prestación de servicios</option>
+                    <option value="No sé">No sé</option>
                   </select>
                 </div>
               </div>
@@ -294,9 +322,9 @@
                     <span class="input-group-text"><i class="ni ni-collection"></i></span>
                   </div>
                   <select class="form-control" placeholder="Seleccione" formControlName="tipo_salario_recibo">
-                    <option value="1">Fijo (diario, semanal, quincenal o mensual)</option>
-                    <option value="2">Una parte fija y otra variable</option>
-                    <option value="3">Todo variable (a destajo, por producción, por comisión)</option>
+                    <option value="Fijo (diario, semanal, quincenal o mensual)">Fijo (diario, semanal, quincenal o mensual)</option>
+                    <option value="Una parte fija y otra variable">Una parte fija y otra variable</option>
+                    <option value="Todo variable (a destajo, por producción, por comisión)">Todo variable (a destajo, por producción, por comisión)</option>
                   </select>
                 </div>
               </div>

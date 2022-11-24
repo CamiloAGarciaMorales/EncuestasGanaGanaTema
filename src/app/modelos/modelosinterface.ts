@@ -1,6 +1,5 @@
 export interface encuesta1{
 cedula:number
-fecha_aplicacion:Date
 nombre_encuestado:String
 sexo:String
 anio_nacimiento:Date
@@ -47,6 +46,7 @@ export interface encuesta2
 }
 export interface encuesta3
 {
+    cedula:number
     e3_pregunta1:number
     e3_pregunta2:number
     e3_pregunta3:number
@@ -66,6 +66,7 @@ export interface encuesta3
 }
 export interface encuesta4
 {
+    cedula:number
     e4_pregunta1:number
     e4_pregunta2:number
     e4_pregunta3:number
@@ -91,6 +92,7 @@ export interface encuesta4
 }
 export interface encuesta5
 {
+    cedula:number
     e5_pregunta1:number
     e5_pregunta2:number
     e5_pregunta3:number
