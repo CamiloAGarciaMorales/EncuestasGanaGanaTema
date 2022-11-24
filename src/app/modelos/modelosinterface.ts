@@ -43,6 +43,60 @@ export interface encuesta2
     e2_pregunta13:number
     e2_pregunta14:number
     e2_pregunta15:number
+    e2_pregunta16:number
+    e2_pregunta17:number
+    e2_pregunta18:number
+    e2_pregunta19:number
+    e2_pregunta20:number
+    e2_pregunta21:number
+    e2_pregunta22:number
+    e2_pregunta23:number
+    e2_pregunta24:number
+    e2_pregunta25:number
+    e2_pregunta26:number
+    e2_pregunta27:number
+    e2_pregunta28:number
+    e2_pregunta29:number
+    e2_pregunta30:number
+    e2_pregunta31:number
+    e2_pregunta32:number
+    e2_pregunta33:number
+    e2_pregunta34:number
+    e2_pregunta35:number
+    e2_pregunta36:number
+    e2_pregunta37:number
+    e2_pregunta38:number
+    e2_pregunta39:number
+    e2_pregunta40:number
+    e2_pregunta41:number
+    e2_pregunta42:number
+    e2_pregunta43:number
+    e2_pregunta44:number
+    e2_pregunta45:number
+    e2_pregunta46:number
+    e2_pregunta47:number
+    e2_pregunta48:number
+    e2_pregunta49:number
+    e2_pregunta50:number
+    e2_pregunta51:number
+    e2_pregunta52:number
+    e2_pregunta53:number
+    e2_pregunta54:number
+    e2_pregunta55:number
+    e2_pregunta56:number
+    e2_pregunta57:number
+    e2_pregunta58:number
+    e2_pregunta59:number
+    e2_pregunta60:number
+    e2_pregunta61:number
+    e2_pregunta62:number
+    e2_pregunta63:number
+    e2_pregunta64:number
+    e2_pregunta65:number
+    e2_pregunta66:number
+    e2_pregunta67:number
+    e2_pregunta68:number
+    e2_pregunta69:number
 }
 export interface encuesta3
 {

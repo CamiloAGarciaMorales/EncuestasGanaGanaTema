@@ -12,13 +12,13 @@ const EXCEL_EXTENSION = '.xlsx';
 export class EncuestaServiceService {
   arrayFormularios = []
 
-  url: string = "http://localhost:3000/api/encuestas/formulario/"
-  urlLogin: string = "http://localhost:3000/api/encuestas/aut/login"
-  urlSignup: string = "http://localhost:3000/api/encuestas/aut/signup"
-  urlEncuestaGet: string = "http://localhost:3000/api/encuestas/formulario/encuestaGet"
-  urlEncuestaTodo: string = "http://localhost:3000/api/encuestas/formulario/encuestaTodo"
-  urlDepa: string = "http://localhost:3000/api/encuestas/dep/"
-  urlMuni: string = "http://localhost:3000/api/encuestas/mun/"
+  url: string = "http://10.250.9.41:3000/api/encuestas/formulario/"
+  urlLogin: string = "http://10.250.9.41:3000/api/encuestas/aut/login"
+  urlSignup: string = "http://10.250.9.41:3000/api/encuestas/aut/signup"
+  urlEncuestaGet: string = "http://10.250.9.41:3000/api/encuestas/formulario/encuestaGet"
+  urlEncuestaTodo: string = "http://10.250.9.41:3000/api/encuestas/formulario/encuestaTodo"
+  urlDepa: string = "http://10.250.9.41:3000/api/encuestas/dep/"
+  urlMuni: string = "http://10.250.9.41:3000/api/encuestas/mun/"
 
 
   constructor(private http: HttpClient) { }
